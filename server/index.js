@@ -12,10 +12,10 @@ import { getOrders } from "./controllers/getOrders.js";
 const app = express();
 dotenv.config();
 
-const PORT = process.env.PORT || 5001;
-const USER = process.env.USER;
-const NAME = process.env.NAME;
-const PASSWORD = process.env.PASSWORD;
+const PORT = process.env.PORT || 5001;  //5000
+const USER = process.env.USER;  //Oleksandr
+const NAME = process.env.NAME;  //Organick
+const PASSWORD = process.env.PASSWORD;  //Oleksandr
 
 // access from different ip
 app.use(cors());
