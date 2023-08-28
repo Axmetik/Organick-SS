@@ -1,0 +1,15 @@
+@import "../../styles/index.scss";
+
+.text-block {
+  display: flex;
+  flex-direction: column;
+
+  &__subtitle {
+    color: $subtitle-color;
+    font-family: "YellowTail", sans-serif;
+    font-size: 1.8em;
+  }
+  &__title {
+    font-size: 2.5em;
+  }
+}

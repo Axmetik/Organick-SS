@@ -1,0 +1,30 @@
+@import "../../styles/index.scss";
+
+.offer {
+  background-color: $main-text-color;
+  padding: 7em 0;
+  &__container {
+  }
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1em;
+    width: 100%;
+
+    @media (max-width: 1199.98px) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    @media (max-width: 999.98px) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width: 699.98px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__text-block {
+    padding-bottom: 4em;
+  }
+  &__title {
+    color: #fff;
+  }
+}

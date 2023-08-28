@@ -1,0 +1,157 @@
+@import "../../styles/index.scss";
+
+.header {
+  font-weight: 600;
+  a {
+    color: $main-text-color;
+    transition-duration: 0.5s;
+
+    &:hover {
+      color: $hover-main-text;
+    }
+  }
+
+  &__container {
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.7fr 0.4fr;
+    padding: 15px 0;
+    align-items: center;
+
+    div:not(:first-child) {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    @media (max-width: 519.98px) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  .navbar {
+    gap: 1em;
+  }
+
+  &__search {
+    border-radius: 35px;
+  }
+
+  &__form {
+    background-color: $items-background;
+    border-radius: 35px;
+    padding: 0.5em;
+  }
+
+  &__form-content {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+
+    input {
+      height: 1.5em;
+      border: none;
+      outline: none;
+      background-color: $items-background;
+    }
+  }
+
+  &__button {
+    background-color: $green-color;
+    transition-duration: 0.5s;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 1em;
+    position: relative;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: $initial-font-size;
+      width: $initial-font-size;
+    }
+  }
+
+  &__cart {
+    display: flex;
+    justify-content: flex-end;
+
+    @media (max-width: 449.98px) {
+      justify-content: center;
+    }
+
+    .smth {
+      gap: 0.5em;
+      border-radius: 35px;
+      border: 2px solid $items-background;
+      display: flex;
+      align-items: center;
+      padding: 0.2em;
+      justify-content: flex-end;
+      max-width: fit-content;
+    }
+
+    &-image {
+      background-color: $main-text-color;
+      position: relative;
+      padding: 1em;
+      transition-duration: 0.5s;
+      border-radius: 50%;
+
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: $initial-font-size;
+        width: $initial-font-size;
+      }
+
+      &:hover {
+        background-color: $hover-main-text;
+      }
+    }
+  }
+
+  .burger {
+    &__icon {
+      cursor: pointer;
+      user-select: none;
+      z-index: 3;
+      position: absolute;
+    }
+
+    &__menu {
+      background-color: $green-color;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: translateY(-100%);
+      transition-duration: 1s;
+    }
+    .active {
+      transform: translateY(0);
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      gap: 1em;
+      font-size: 2em;
+    }
+  }
+}

@@ -1,0 +1,220 @@
+@import "../../styles/index.scss";
+
+.order {
+  background-color: $order-color;
+  padding: 2em 0;
+  margin: 4em 0;
+  &__container {
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+  }
+  &__item {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    @media (max-width: 1049.98px) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "image text" "quantity quantity";
+    }
+
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
+      grid-template-areas: "image" "text" "quantity";
+      gap: 2em;
+    }
+  }
+  &__image {
+    position: relative;
+    background-color: $order-color;
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 250px;
+    height: 300px;
+    width: 300px;
+    @media (max-width: 1049.98px) {
+      grid-area: image;
+    }
+
+    @media (max-width: 600px) {
+      margin: 0 auto;
+    }
+  }
+  &__text {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    @media (max-width: 1049.98px) {
+      grid-area: text;
+    }
+  }
+  &__title {
+    font-size: 1.2em;
+    font-weight: 500;
+  }
+  &__previous {
+    text-decoration: line-through;
+    font-size: 0.75em;
+    color: #b8b8b8;
+  }
+  &__current {
+    font-weight: 600;
+    font-size: 1.2em;
+  }
+  &__quantity {
+    position: relative;
+    input {
+      padding: 1.5em 1em;
+      border-radius: 20px;
+      border: 3px solid $main-text-color;
+      outline: $main-text-color;
+      font-weight: 600;
+      color: $main-text-color;
+      text-align: center;
+      width: 7.5em;
+    }
+    @media (max-width: 1049.98px) {
+      grid-area: quantity;
+    }
+  }
+  &__cross {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    content: "";
+    background-color: $main-text-color;
+    color: #fff;
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $hover-main-text;
+    }
+  }
+
+  &__summary {
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 100%;
+    text-align: right;
+    align-items: flex-end;
+    padding-top: 2em;
+  }
+  &__cost,
+  &__discount {
+    display: flex;
+    //grid-template-columns: 1fr 1fr;
+    gap: 2em;
+  }
+
+  &__button {
+    background-color: $main-text-color;
+    margin: 0 auto;
+    margin: 4em auto;
+
+    &:hover {
+      background-color: $hover-main-text;
+    }
+
+    .button__text {
+      font-size: 1em;
+      color: #fff;
+      font-weight: 600;
+    }
+  }
+
+  &__form {
+    margin-top: 6em;
+    form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        "name email"
+        "adress phone"
+        "message message"
+        "button button";
+      justify-content: center;
+      gap: 3em;
+
+      @media (max-width: 649.98px) {
+        display: flex;
+        flex-direction: column;
+      }
+
+      input {
+        padding: 1.5em 1em;
+        border-radius: 20px;
+        border: 2px solid $green-color;
+        outline: $green-color;
+        font-weight: 400;
+        font-style: italic;
+        color: $grey-text-color;
+        width: 100%;
+      }
+
+      textarea {
+        width: 100%;
+        border: 2px solid $green-color;
+        outline: $green-color;
+        padding: 1.5em 1em;
+        border-radius: 20px;
+        font-weight: 400;
+        font-style: italic;
+        color: $grey-text-color;
+      }
+
+      div {
+        position: relative;
+      }
+
+      label {
+        position: absolute;
+        content: "";
+        top: -2em;
+        left: 0;
+        z-index: 3;
+        font-weight: 600;
+        color: $main-text-color;
+      }
+
+      .order__button {
+        &:hover {
+          background-color: $hover-yellow;
+        }
+
+        @media (max-width: 649.98px) {
+          margin: 0 auto;
+        }
+      }
+    }
+    .order__button {
+      grid-area: button;
+    }
+  }
+  &__full-name {
+    grid-area: name;
+  }
+  &__email {
+    grid-area: email;
+  }
+  &__adress {
+    grid-area: adress;
+  }
+  &__phone {
+    grid-area: phone;
+  }
+  &__message {
+    grid-area: message;
+  }
+}

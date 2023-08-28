@@ -1,0 +1,29 @@
+@import "../../styles/index.scss";
+
+.admin {
+  margin: 3em 0;
+  &__container {
+  }
+  &__content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    table {
+      width: 100%;
+      border: 1px solid $main-text-color;
+      background: $main-text-color;
+
+      th,
+      td {
+        border: 1px solid $main-text-color;
+        text-align: center;
+        background: #fff;
+      }
+      td {
+        color: $grey-text-color;
+        font-style: italic;
+      }
+    }
+  }
+}

@@ -1,0 +1,78 @@
+@import "../../styles/index.scss";
+
+.subscribe {
+  margin: 3em 0;
+  &__container {
+  }
+  &__content {
+    background-image: url("../../assets/main/subscribe/subs-background.png");
+    background-repeat: no-repeat;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4em 2em;
+
+    @media (max-width: 1099.98px) {
+      flex-direction: column;
+      gap: 2em;
+    }
+    @media (max-width: 769.98px) {
+      padding: 2em;
+      gap: 1em;
+    }
+  }
+  &__text {
+    color: #fff;
+    font-size: 2.5em;
+    max-width: 28%;
+
+    @media (max-width: 1099.98px) {
+      max-width: 100%;
+      text-align: center;
+    }
+    @media (max-width: 769.98px) {
+      font-size: 1.5em;
+    }
+  }
+  &__form {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+
+    input {
+      padding: 1.5em 1em;
+      border-radius: 20px;
+      font-style: italic;
+      border: none;
+      outline: none;
+      width: 20em;
+
+      @media (max-width: 500px) {
+        width: 15em;
+      }
+    }
+
+    @media (max-width: 769.98px) {
+      flex-direction: column;
+      gap: 1em;
+    }
+  }
+
+  &__button {
+    padding: 1.5em 3em;
+    background-color: $main-text-color;
+
+    .button__text {
+      color: #fff;
+    }
+
+    span {
+      display: none;
+    }
+
+    &:hover {
+      background-color: $hover-main-text;
+    }
+  }
+}

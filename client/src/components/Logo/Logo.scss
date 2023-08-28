@@ -1,0 +1,16 @@
+@import "../../styles/index.scss";
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5em;
+  font-size: 2em;
+  font-weight: 600;
+  color: $main-text-color;
+  transition-duration: 0.5s;
+
+  &:hover {
+    color: $hover-main-text;
+  }
+}

@@ -1,0 +1,120 @@
+@import "../../styles/index.scss";
+
+.testimonials {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  //margin-bottom: 6em;
+
+  @media (max-width: 1244.98px) {
+    &::before,
+    &:after {
+      display: none;
+    }
+  }
+
+  &:before,
+  &:after {
+    position: absolute;
+    top: 0;
+    content: "";
+    z-index: -1;
+    background-color: #fff;
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    height: 100%;
+  }
+  &:before {
+    background-image: url("../../assets/main/testimonials/testimonials-background1.png");
+    left: 0;
+    width: 40%;
+  }
+  &:after {
+    background-image: url("../../assets/main/testimonials/testimonials-background2.png");
+    right: 0;
+    width: 30%;
+  }
+  &__container {
+    max-width: 1030px;
+    //background-color: #fff;
+    padding-top: 2em;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+  }
+  &__text-block {
+    text-align: center;
+  }
+  &__swiper {
+    width: 70%;
+  }
+  &__slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1em;
+  }
+  &__photo {
+  }
+  &__stars {
+  }
+  &__text {
+    font-size: 0.9em;
+    color: $grey-text-color;
+    font-weight: 300;
+  }
+  &__name {
+    font-size: 1.25em;
+  }
+  &__position {
+    font-size: 0.75em;
+    color: $grey-text-color;
+  }
+
+  &__circles {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0.5em;
+    padding: 6em 0;
+
+    @media (max-width: 850px) {
+      grid-template-columns: 1fr 1fr;
+      padding-top: 4em;
+    }
+    @media (max-width: 500px) {
+      grid-template-columns: 1fr;
+      padding-top: 2em;
+    }
+  }
+  &__circle {
+    padding: 2em;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    background-color: #f1f1f1;
+    border: 5px solid $green-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: $main-text-color;
+
+    h3 {
+      font-size: 2.5em;
+    }
+    span {
+      font-size: 0.9em;
+      font-weight: 500;
+    }
+  }
+}

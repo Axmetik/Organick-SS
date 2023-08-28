@@ -1,0 +1,115 @@
+@import "../../styles/index.scss";
+
+.our-products {
+  margin: 10em 0;
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5em;
+  }
+  &__text-block {
+    align-items: center;
+  }
+  &__subtitle {
+  }
+  &__title {
+  }
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1em;
+    width: 100%;
+
+    @media (max-width: 1199.98px) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    @media (max-width: 999.98px) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width: 699.98px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__button {
+    background-color: #1e1e1e;
+
+    &:hover {
+      background-color: #000;
+    }
+
+    .button__text {
+      font-size: 1em;
+      color: #fff;
+      font-weight: 600;
+    }
+  }
+  &__item {
+    position: relative;
+    background-color: $items-background;
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 250px;
+    min-height: 481px;
+    width: 100%;
+    border-radius: 30px;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    &:hover {
+      background-size: 290px;
+
+      .our-products__category {
+        background: $hover-main-text;
+      }
+    }
+  }
+  &__category {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    background: $main-text-color;
+    color: #fff;
+    font-size: 0.75em;
+    padding: 0.5em 1em;
+    border-radius: 10px;
+  }
+  &__description {
+    position: absolute;
+    bottom: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+  &__name {
+    position: relative;
+    font-weight: 600;
+
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: -50%;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: #b8b8b8;
+    }
+  }
+  &__values {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__previous {
+    text-decoration: line-through;
+    font-size: 0.75em;
+    color: #b8b8b8;
+  }
+  &__current {
+    font-weight: 600;
+  }
+}

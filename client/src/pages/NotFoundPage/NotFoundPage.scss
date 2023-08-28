@@ -1,0 +1,65 @@
+@import "../../styles/index.scss";
+
+.not-found {
+  background-image: url("../../assets/main/not-found/not-found-bg.png");
+  background-repeat: repeat-x;
+  background-position: 60% 0;
+  padding: 3em;
+
+  &__container {
+    display: flex;
+    justify-content: flex-end;
+
+    @media (max-width: 1099.98px) {
+      justify-content: center;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 1099.98px) {
+      align-items: center;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 20em;
+      font-weight: 800;
+      color: #8fa8a8;
+      @media (max-width: 749.98px) {
+        font-size: 15em;
+      }
+
+      @media (max-width: 576.98px) {
+        display: none;
+      }
+    }
+
+    h3 {
+      font-size: 3.5em;
+      font-weight: 700;
+      color: $main-text-color;
+      padding-bottom: 10px;
+    }
+    .text {
+      font-family: "Open Sans", sans-serif;
+      color: $grey-text-color;
+      font-weight: 600;
+      padding-bottom: 1em;
+    }
+  }
+  &__button {
+    background-color: $main-text-color;
+
+    &:hover {
+      background-color: $hover-main-text;
+    }
+
+    .button__text {
+      font-size: 1em;
+      color: #fff;
+      font-weight: 600;
+    }
+  }
+}

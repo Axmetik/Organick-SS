@@ -1,0 +1,126 @@
+@import "../../styles/index.scss";
+
+.news {
+  padding: 5em 0 10em 0;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+  }
+  &__heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    @media (max-width: 775.98px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2em;
+    }
+  }
+  &__text-block {
+    max-width: 50%;
+
+    @media (max-width: 775.98px) {
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+  &__content {
+  }
+  &__board {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3em;
+
+    @media (max-width: 1100px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10em;
+    }
+  }
+  &__block {
+    position: relative;
+    img {
+      border-radius: 30px;
+
+      @media (max-width: 530px) {
+        display: none;
+      }
+    }
+  }
+  &__date {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    background-color: #fff;
+    font-size: 1.25em;
+    font-weight: 700;
+    padding: 1em;
+    border-radius: 50%;
+    // height: 100%;
+    // width: 100%;
+
+    @media (max-width: 530px) {
+      background-color: $main-text-color;
+      color: #fff;
+      top: 0;
+    }
+  }
+  &__page {
+    position: absolute;
+    bottom: -5em;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    -webkit-box-shadow: 0px 25px 40px -22px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 25px 40px -22px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 25px 40px -22px rgba(0, 0, 0, 0.75);
+
+    @media (max-width: 530px) {
+      position: relative;
+    }
+  }
+  &__author {
+    &::before {
+      content: url("../../assets/main/news/news-author.svg");
+      padding-right: 0.5em;
+    }
+  }
+  &__title {
+    font-weight: 700;
+  }
+  &__text {
+    font-family: "Open Sans", sans-serif;
+    color: $grey-text-color;
+  }
+  &__button {
+    background-color: #fff;
+    border: 3px solid $main-text-color;
+
+    &:hover {
+      background-color: $main-text-color;
+
+      .button__text {
+        color: #fff;
+      }
+    }
+
+    .button__text {
+      font-size: 1em;
+      color: $main-text-color;
+      font-weight: 600;
+    }
+  }
+}
