@@ -1,1 +1,2 @@
-To run server write **npm run start**
+To run server write 
+# **npm run start**
