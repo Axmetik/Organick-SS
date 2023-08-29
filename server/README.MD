@@ -4,6 +4,5 @@
 #### To run server write 
 # **npm run start**
 
-#### Access to the database is granted only to employees of SigmaSoftware
+#### !! Access to the database is granted only to employees of SigmaSoftware !!
 
-<span style="color: red">This text is red.</span>
