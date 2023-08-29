@@ -6,4 +6,4 @@
 
 #### Access to the database is granted only to employees of SigmaSoftware
 
-<span style="color: red;">This text is red.</span>
+<span style="color: red">This text is red.</span>
