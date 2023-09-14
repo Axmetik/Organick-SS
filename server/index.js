@@ -33,8 +33,7 @@ app.get("/getOrders", getOrders);
 async function start() {
   try {
     await mongoose.connect(
-      //`mongodb+srv://${USER}:${PASSWORD}@cluster0.kbl3byl.mongodb.net/${NAME}?retryWrites=true&w=majority`
-      `mongodb+srv://Oleksandr:$Oleksandr@cluster0.kbl3byl.mongodb.net/Organick?retryWrites=true&w=majority`
+      `mongodb+srv://${USER}:${PASSWORD}@cluster0.kbl3byl.mongodb.net/${NAME}?retryWrites=true&w=majority`
     );
     app.listen(PORT, () => {
       console.log(`Server started on port ${PORT}`);
